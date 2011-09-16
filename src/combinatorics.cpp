@@ -1,4 +1,5 @@
 #include <stdexcept>
+#include <stdint.h>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ namespace math
  * @return silnia
  * @throws invalid_argument
  */
-unsigned long int factorial(const int n, const int k = 0) {
+uint64_t factorial(const int n, const int k = 0) {
     if (n < 0 || k < 0) throw invalid_argument("Nie mogę obliczyć silni z liczby ujemnej");
 
     return n <= 1 || n <= k ? 1 : factorial(n - 1, k) * n;
@@ -24,7 +25,7 @@ unsigned long int factorial(const int n, const int k = 0) {
  * @param k Wielkość kombinacji
  * @return Zwraca k-elementową wariację bez powtórzeń n-elemenowego zbioru
  */
-long double permutation(const int n, const int k) {
+uint64_t permutation(const int n, const int k) {
     if (n <= 0) throw invalid_argument("Wielkość zbioru powinna być większa od zera");
     if (k > n) throw invalid_argument("Wielkość kombinacji nie może być większa od wielkości zbioru");
 
@@ -35,7 +36,7 @@ long double permutation(const int n, const int k) {
 /**
  * Kombinacja bez powtórzeń
  */
-long double combination(const int n, const int k) {
+uint64_t combination(const int n, const int k) {
     if (n <= 0) throw invalid_argument("Wielkość zbioru powinna być większa od zera");
     if (k > n) throw invalid_argument("Wielkość kombinacji nie może być większa od wielkości zbioru");
 

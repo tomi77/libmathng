@@ -4,14 +4,12 @@
 #include <stdexcept>
 #include <string>
 
-using namespace std;
-
 namespace math {
 
 /**
  * Thrown to indicate divide by zero problem.
  */
-class divide_by_zero : public exception
+class divide_by_zero : public std::exception
 {
 public:
     divide_by_zero() throw() {}

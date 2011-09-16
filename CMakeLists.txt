@@ -1,4 +1,4 @@
 project(libmathng)
 
-add_executable(libmathng main.cpp)
-
+add_subdirectory(src)
+add_subdirectory(demo)
