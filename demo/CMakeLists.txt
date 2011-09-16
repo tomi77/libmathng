@@ -1,2 +1,0 @@
-add_executable(rational_demo rational.cpp)
-target_link_libraries(rational_demo rational)
